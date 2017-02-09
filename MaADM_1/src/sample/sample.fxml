@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="497.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="drawButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onDrawButtonClick" prefHeight="47.0" prefWidth="96.0" text="Draw" />
+      <Canvas fx:id="mainCanvas" height="461.0" layoutX="14.0" layoutY="68.0" width="475.0" />
+      <TextField fx:id="pointsCountTextField" layoutX="230.0" layoutY="15.0" />
+      <TextField fx:id="classesCountTextField" layoutX="230.0" layoutY="40.0" />
+      <Label layoutX="138.0" layoutY="19.0" text="Points count" />
+      <Label layoutX="136.0" layoutY="44.0" text="Classes count" />
+   </children>
+</Pane>
