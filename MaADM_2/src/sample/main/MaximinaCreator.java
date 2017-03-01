@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * Created by User on 13.02.2017.
  */
-public class MaximinaCreator implements IConstantConfigurate{
+public class MaximinaCreator implements IConstantConfigurate {
 
     private int pointsCount;
     private int drawFieldHeight,
@@ -104,16 +104,12 @@ public class MaximinaCreator implements IConstantConfigurate{
         }
     }
 
-    private double getAverageDistance()
-    {
+    private double getAverageDistance() {
         double average = 0;
         int counter = 0;
-        for (ClassCenter centerOne : classesCenters)
-        {
-            for (ClassCenter centerTwo : classesCenters)
-            {
-                if (centerOne != centerTwo)
-                {
+        for (ClassCenter centerOne : classesCenters) {
+            for (ClassCenter centerTwo : classesCenters) {
+                if (centerOne != centerTwo) {
                     average += centerOne.getDistance(centerTwo);
                     counter++;
                 }
@@ -144,16 +140,13 @@ public class MaximinaCreator implements IConstantConfigurate{
             int average = (int)getAverageDistance();
             average /= 2;
             Point newCenter = null;
-            for (Point point : points)
-            {
-                if (point.getDistanceToCenter() > average)
-                {
+            for (Point point : points) {
+                if (point.getDistanceToCenter() > average) {
                     newCenter = point;
                 }
             }
 
-            if (newCenter != null)
-            {
+            if (newCenter != null) {
                 ClassCenter center = new ClassCenter();
                 center.setX(newCenter.getX());
                 center.setY(newCenter.getY());
@@ -162,8 +155,7 @@ public class MaximinaCreator implements IConstantConfigurate{
                 points.remove(newCenter);
 
             }
-            else
-            {
+            else {
                 check = false;
             }
         }
